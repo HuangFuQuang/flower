@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取地理信息</title>
+</head>
+<body>
+	<p id="geo"></p>
+	<script type="text/javascript">
+	var p=document.getElementById("geo");
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(function(position){
+				show(position.coords.latitude,position.coords.longitude);
+			},function(error){
+                p.innerHTML=error.code+"\n"+error.message;
+			})
+		}else{
+			alert("对不起，你不支持获取地理位置")
+		}
+		function show(lat,lon){
+			p.innerHTML="您当前的位置:纬度:"+lat+",经度:"+lan;
+		}
+	</script>
+</body>
+</html>
