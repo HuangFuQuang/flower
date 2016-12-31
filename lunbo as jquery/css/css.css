@@ -1,0 +1,107 @@
+body,ul{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+.main-slider{
+	width: 790px;
+	height: 340px;
+	overflow: hidden;
+}
+/*大的盒子设置了大小，后面的可以直接用百分比*/
+.main-slider .main-slider-imglist,
+.main-slider .main-slider-imglist .slider-list{
+	height: 100%;
+	width: 100%;
+}
+.main-slider .main-slider-imglist{
+	position: relative;
+}
+.main-slider .main-slider-imglist .slider-list li{
+  list-style: none;
+  display: none;
+}
+.main-slider .main-slider-imglist .slider-list .on{
+	display: block;
+}
+.main-slider .main-slider-imglist li{
+	height: 100%;
+}
+.main-slider .main-slider-imglist li a{
+	display: block;
+	width: 790px;
+	height: 340px;
+}
+
+/*定义左右两侧按钮*/
+.left-btn,.right-btn{
+	display: block;
+   width: 30px;
+   height: 60px;
+   background: rgba(0,0,0,0.1);
+}
+.left-btn{
+   position:absolute;
+   top:50%;
+   left:0px;
+   
+}
+.right-btn{
+   position:absolute;
+   top:50%;
+   right:0px;
+}
+/*定义左右两边的箭头*/
+.left-arrow,.right-arrow{
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-bottom: 1px solid white;
+	float: left;
+	margin-top: 26px;
+
+}
+.left-arrow{
+    margin-left: 12px;
+	border-left: 1px solid white;
+	transform:rotate(45deg);/*正角度是顺时针负角度是逆时针*/
+    -ms-transform:rotate(45deg); 	/* IE 9 */
+    -moz-transform:rotate(45deg); 	/* Firefox */
+    -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+    -o-transform:rotate(45deg);
+}
+.right-arrow{
+	margin-left: 10px;
+	border-right: 1px solid white;
+	transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg); 	/* IE 9 */
+    -moz-transform:rotate(-45deg); 	/* Firefox */
+    -webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
+    -o-transform:rotate(-45deg);
+}
+/*设置左右两侧按钮手势*/
+.left-btn:hover,.right-btn:hover{
+	 background: rgba(0,0,0,0.5);
+}
+/*设置底部表示以及小圆点*/
+.wrapper{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	background: rgba(255,255,255,0.3);
+	border-radius: 10px;
+}
+
+.wrapper .wrapper-items{
+	float: left;
+	width: 12px;
+	height: 12px;
+    margin: 6px;
+    border-radius: 50%;
+    background:white;
+}
+.wrapper .select{
+	background:red;
+}
